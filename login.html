@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <title>Login</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="firebaseAPI.js"></script>
+
+</head>
+<body>
+
+  <div id="login-container">
+    <h2>Welcome to CragIt!</h2>
+    <div id="login-form">
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" placeholder="Enter email">
+      <label for="password">Password</label>
+      <input type="text" id="password" name="password" placeholder="Enter password">
+      <button id="login" onclick="logIn()">Login</button>
+      <p>Don't have an account? <a href="signUp.html">Create account</a></p>
+    </div>
+  </div>
+
+  <script>
+
+    // window.onload = function() {
+    //   location.href = "loading.html";
+    // }
+
+    // const loginForm = document.getElementById("login-form");
+    // loginForm.addEventListener("submit", e => {
+    //   e.preventDefault();
+
+    //   // same level as current page
+    //   // location.href = "climb_type.html";
+
+    //   // page located the root folder
+    //   // location.href = "/climb_type.html";
+    // }
+
+    // firebase.auth().onAuthStateChanged(user => {
+    //   console.log(user);
+    // })
+
+
+    function logIn() {
+      console.log("logging in");
+
+      var userEmail = document.getElementById("email").value;
+      var userPassword = document.getElementById("password").value;
+
+       // When a user signs in, passes the user's email address and password
+      // to signInWithEmailAndPassword
+      firebase.auth().signInWithEmailAndPassword(userEmail, userPassword)
+      .then((userCredential) => {
+        // Signed in
+        console.log("signing in");
+        var user = userCredential.user;
+        // console.log(userCredential);
+        console.log("new" + userCredential.additionalUserInfo.isNewUser);
+        // ...
+
+        firebase.auth().onAuthStateChanged((user) => {
+          if (user) {
+            // User is signed in, see docs for a list of available properties
+            // https://firebase.google.com/docs/reference/js/firebase.User
+            var uid = user.uid;
+
+            console.log("change windows");
+            window.location.assign("climb_type.html");
+
+            // ...
+          } else {
+            // User is signed out
+            // ...
+          }
+        })
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+      });
+    }
+
+    // function signOut() {
+
+    //   // To sign out a user
+    //   firebase.auth().signOut().then(() => {
+    //     // Sign-out successful.
+    //     }).catch((error) => {
+    //     // An error happened.
+    //   });
+
+    // set an observer on the Auth object
+    // can then get the user's basic profile info form the User object
+
+  </script>
+  
+</body>
+</html>

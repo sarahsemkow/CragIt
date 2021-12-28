@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="climb_type.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="firebaseAPI.js"></script>
+
+  <title>CragIt</title>
+</head>
+<body>
+
+  <!-- <div id="content">
+
+    <h2>What type of climbing do you do?</h2>
+    <button id="trad">Trad</button>
+    <button id="bouldering">Bouldering</button>
+    <button id="sport">Sport Climbing</button>
+
+  </div> -->
+
+  <div id="type-of-climbing">
+    <h2>What type of climbing?</h2>
+    <label for="trad">
+      <input id="climb-trad" type="checkbox">
+      <span>Trad</span>
+    </label>
+    <label for="bouldering">
+      <input id="climb-boulder" type="checkbox">
+      <span>Bouldering</span>
+    </label>
+    <label for="sport">
+      <input id="climb-sport" type="checkbox">
+      <span>Sport Climbing</span>
+    </label>
+  </div>
+
+</body>
+</html>
