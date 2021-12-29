@@ -34,9 +34,41 @@
   </div>
 
   <script>
+    var uid;
+
     function postClimbing() {
+
+      firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+          uid = user.uid;
+          currentUser = db.collection("users").doc(uid);
+          currentUser.onSnapshot(userDoc => {
+            userData = userDoc.data();
+          })
+
+          saveClimbingType("trad");
+          saveClimbingType("bouldering");
+          saveClimbingType("sport");         
+
+          // ...
+        } else {
+          // User is signed out
+          // ...
+        }
+      });
       
     }
+    
+    function saveClimbingType(climbType) {
+      if (document.getElementById(`${climbType}`).checked) {
+            db.collection("users").doc(uid).update({
+              climbingType: `${climbType}`
+          }).then(function() {
+            window.location.assign("main.html");
+          })
+      }
+    }
+
   </script>
 
 </body>
