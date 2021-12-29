@@ -60,12 +60,49 @@
     }
     
     function saveClimbingType(climbType) {
-      if (document.getElementById(`${climbType}`).checked) {
-            db.collection("users").doc(uid).update({
-              climbingType: `${climbType}`
+      if (climbType == "trad") {
+        if (document.getElementById(`${climbType}`).checked) {
+          db.collection("users").doc(uid).update({
+            trad: true
           }).then(function() {
-            window.location.assign("main.html");
+              // window.location.assign("main.html");
           })
+        } else {
+          db.collection("users").doc(uid).update({
+                trad: false
+            }).then(function() {
+              // window.location.assign("main.html");
+            })
+        }
+      } else if (climbType == "bouldering") {
+        if (document.getElementById(`${climbType}`).checked) {
+          db.collection("users").doc(uid).update({
+            bouldering: true
+          }).then(function() {
+              // window.location.assign("main.html");
+          })
+        } else {
+          db.collection("users").doc(uid).update({
+                bouldering: false
+            }).then(function() {
+              // window.location.assign("main.html");
+            })
+        }
+      } else if (climbType == "sport") {
+        if (document.getElementById(`${climbType}`).checked) {
+          db.collection("users").doc(uid).update({
+            sport: true
+          }).then(function() {
+              // window.location.assign("main.html");
+          })
+        } else {
+          db.collection("users").doc(uid).update({
+                sport: false
+            }).then(function() {
+              // window.location.assign("main.html");
+            })
+        }
+
       }
     }
 
