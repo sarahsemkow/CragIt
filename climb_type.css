@@ -2,66 +2,83 @@
 
 html {
   font-size: x-large;
-}
-
-button {
-  padding: 1rem;
   font-family: 'PT Serif', serif;
-  font-size:x-large;
-  border: none;
-  background-color: rgb(201, 242, 242);
-  border-radius: 10px;
 }
 
-#content {
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  row-gap: 1rem;
+h2 {
+  margin-bottom: 20px;
 }
 
-#type-of-climbing {
-  margin: auto;
-  background-color: cornflowerblue;
+#climb-types label {
+  width: 180px;
+  height: 72px;
+  border: 2px solid rebeccapurple;    
   border-radius: 8px;
-  display: flex;
-  justify-content: space-evenly;
+  margin: auto;
+  margin-top:0px;
+  margin-bottom: 0px;
 }
 
-#type-of-climbing label {
-  float:inline-start;
-  width: 20px;
-  border: 1px solid rebeccapurple;    
-}
-
-#type-of-climbing label span {
-  text-align: center;
-  padding: 3px 0;
+#climb-types label span {
+  padding: 20px 0;
   display: block;
 }
 
-#type-of-climbing label input {
+#climb-types label input {
   position: absolute;
   top: -20px;
 }
 
-#type-of-climbing input:checked + span {
+label:hover, input:hover {
+  cursor: pointer;
+}
+
+#climb-types input:checked + span {
   background-color: rebeccapurple;
   color:rgb(201, 242, 242);
 }
 
-/* <div id="type-of-climbing">
-<label for="trad">
-  <input id="climb-trad" type="checkbox">
-  <span>Trad</span>
-</label>
-<label for="bouldering">
-  <input id="climb-boulder" type="checkbox">
-  <span>Bouldering</span>
-</label>
-<label for="sport">
-  <input id="climb-sport" type="checkbox">
-  <span>Sport Climbing</span>
-</label>
-</div> */
+#submit-here {
+  padding: 20px 65px;
+  border: none;
+  background-color: rgb(201, 242, 242);
+  border-radius: 8px;
+  /* color: black; */
+  font-size: x-large;
+  font-family: 'PT Serif', serif;
+}
+
+#submit-here:hover {
+  transform: scale(1.05, 1.05);
+  cursor: pointer;
+}
+
+#climb-types {
+  margin: 0 30%;
+  margin-top: 15%;
+  margin-bottom: 20px;
+  /* margin: 100px; */
+  background-color: cornflowerblue;
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: (5, 1fr);
+  row-gap: 30px;
+  justify-items: center;
+  text-align: center;
+  /* height: 70vh; */
+  /* width: 50vw; */
+  padding-bottom: 30px;
+  /* height: 100vh; */
+}
+
+@media screen and (max-width: 1000px) {
+
+  #climb-types {
+    margin: 0 10%;
+    margin-top: 30%;
+    margin-bottom: 20px;
+  }
+
+}
 
  

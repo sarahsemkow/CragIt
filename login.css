@@ -16,14 +16,6 @@ html {
   font-weight: 350;
 }
 
-#login-container {
-  margin: 10%;
-  margin-top: 50%;
-  background-color: rgb(194, 242, 242);
-  padding: 10px 40px;
-  text-align: center;
-}
-
 #login-form {
   text-align: center;
   display: grid;
@@ -72,4 +64,27 @@ a {
   color: rgb(0, 157, 255);
   text-decoration: none;  
 }
+
+#login-container {
+  margin: 10%;
+  margin-top: 15%;
+  background-color: rgb(194, 242, 242);
+  padding: 10px 40px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+
+  #login-container {
+    margin: 10%;
+    margin-top: 50%;
+    background-color: rgb(194, 242, 242);
+    padding: 10px 40px;
+    text-align: center;
+  }
+  
+}
+
+
+
 

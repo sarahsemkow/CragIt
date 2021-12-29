@@ -16,30 +16,28 @@
 </head>
 <body>
 
-  <!-- <div id="content">
-
-    <h2>What type of climbing do you do?</h2>
-    <button id="trad">Trad</button>
-    <button id="bouldering">Bouldering</button>
-    <button id="sport">Sport Climbing</button>
-
-  </div> -->
-
-  <div id="type-of-climbing">
+  <div id="climb-types">
     <h2>What type of climbing?</h2>
     <label for="trad">
-      <input id="climb-trad" type="checkbox">
+      <input id="trad" type="checkbox">
       <span>Trad</span>
     </label>
     <label for="bouldering">
-      <input id="climb-boulder" type="checkbox">
+      <input id="bouldering" type="checkbox">
       <span>Bouldering</span>
     </label>
     <label for="sport">
-      <input id="climb-sport" type="checkbox">
+      <input id="sport" type="checkbox">
       <span>Sport Climbing</span>
     </label>
+    <input id="submit-here" type="submit" value="Next" onclick="postClimbing()">
   </div>
+
+  <script>
+    function postClimbing() {
+      
+    }
+  </script>
 
 </body>
 </html>
