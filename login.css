@@ -1,0 +1,90 @@
+/* <div id="login-container">
+<div id="login-form">
+  <label for="email">Email</label>
+  <input type="text" id="email" name="email" placeholder="Enter email">
+  <label for="password">Password</label>
+  <input type="text" id="password" name="password" placeholder="Enter password">
+<!-- <input type="submit" id="submit" value="Login"> -->
+  <button id="signUp" onclick="createAccount()">Create Account</button>
+  <!-- <button id="signUp" onclick="signUp()" style="display: none;">Create account</button> -->
+  <p>Aready have an account? <a href="login.html">Log In</a></p>
+</div>
+</div> */
+
+html {
+  font-family: sans-serif;
+  font-weight: 350;
+}
+
+#login-form {
+  text-align: center;
+  display: grid;
+  grid-template-rows: (6, 1fr);
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-size: large;
+}
+
+input {
+  border-radius: 8px;
+  border: none;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  font-size: large
+}
+
+button {
+  padding: 0.5rem;
+  font-size: large;
+  border: none;
+  background-color: rgb(0, 166, 255);
+  border-radius: 8px;
+  color: white;
+}
+
+input, button {
+  width: 200px;
+  text-align: center;
+  justify-self: center;
+}
+
+button:hover {
+  background-color: white;
+  border: 2px solid cadetblue;
+  color: rgb(0, 166, 255); 
+}
+
+p {
+  color: grey;
+}
+
+a {
+  color: rgb(0, 157, 255);
+  text-decoration: none;  
+}
+
+#login-container {
+  margin: 10%;
+  margin-top: 15%;
+  background-color: rgb(194, 242, 242);
+  padding: 10px 40px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+
+  #login-container {
+    margin: 10%;
+    margin-top: 50%;
+    background-color: rgb(194, 242, 242);
+    padding: 10px 40px;
+    text-align: center;
+  }
+  
+}
+
+
+
+

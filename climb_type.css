@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+html {
+  font-size: x-large;
+  font-family: 'PT Serif', serif;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+#climb-types label {
+  width: 180px;
+  height: 72px;
+  border: 2px solid rebeccapurple;    
+  border-radius: 8px;
+  margin: auto;
+  margin-top:0px;
+  margin-bottom: 0px;
+}
+
+#climb-types label span {
+  padding: 20px 0;
+  display: block;
+}
+
+#climb-types label input {
+  position: absolute;
+  top: -20px;
+}
+
+label:hover, input:hover {
+  cursor: pointer;
+}
+
+#climb-types input:checked + span {
+  background-color: rebeccapurple;
+  color:rgb(201, 242, 242);
+}
+
+#submit-here {
+  padding: 20px 65px;
+  border: none;
+  background-color: rgb(201, 242, 242);
+  border-radius: 8px;
+  /* color: black; */
+  font-size: x-large;
+  font-family: 'PT Serif', serif;
+}
+
+#submit-here:hover {
+  transform: scale(1.05, 1.05);
+  cursor: pointer;
+}
+
+#climb-types {
+  margin: 0 30%;
+  margin-top: 15%;
+  margin-bottom: 20px;
+  /* margin: 100px; */
+  background-color: cornflowerblue;
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: (5, 1fr);
+  row-gap: 30px;
+  justify-items: center;
+  text-align: center;
+  /* height: 70vh; */
+  /* width: 50vw; */
+  padding-bottom: 30px;
+  /* height: 100vh; */
+}
+
+@media screen and (max-width: 1000px) {
+
+  #climb-types {
+    margin: 0 10%;
+    margin-top: 30%;
+    margin-bottom: 20px;
+  }
+
+}
+
+ 
