@@ -1,0 +1,86 @@
+html {
+  font-family: sans-serif;
+  font-weight: 350;
+}
+
+h2 {
+  text-align: center;
+}
+
+#container {
+  display: grid;
+  row-gap: 50px;
+}
+
+#climb-types input + label {
+  /* width: 150px; */
+  /* height: 52px; */
+  border: 2px solid rebeccapurple;    
+  border-radius: 8px;
+  padding: 15px 5px;
+}
+
+#climb-types label input {
+  position: absolute;
+  top: -20px;
+}
+
+#climb-types input {
+  position: absolute;
+  top: -20px;
+}
+
+label:hover, input:hover {
+  cursor: pointer;
+}
+
+#climb-types input:checked + label {
+  background-color: rebeccapurple;
+  color:rgb(201, 242, 242);
+}
+
+#climb-types {
+  display: grid;
+  /* grid-template-rows: (5, 1fr); */
+  row-gap: 20px;
+  /* justify-items: center; */
+  text-align: center;
+}
+
+li {
+  background-color: aquamarine;
+  list-style-type: none;
+  text-align: center;
+  padding: 40px;
+  border: 2px solid red;
+  border-radius: 8px;
+  margin: 0 40px;
+  margin-bottom: 20px;
+}
+
+li:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.squam-areas {
+  background-color:rgb(157, 157, 245);
+}
+
+@media screen and (max-width: 1000px) {
+
+  #climb-types {
+    /* margin: 0 10%; */
+    /* margin-top: 30%; */
+    /* margin-bottom: 20px; */
+  }
+
+}
+
+
+
+
+
+
+
+ 
+
