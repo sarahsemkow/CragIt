@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="/styles/login.css">
   <title>Login</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script src="firebaseAPI.js"></script>
+  <script src="/firebaseAPI.js"></script>
 
 </head>
 <body>
@@ -24,7 +24,7 @@
       <label for="password">Password</label>
       <input type="text" id="password" name="password" placeholder="Enter password">
       <button id="login" onclick="logIn()">Login</button>
-      <p>Don't have an account? <a href="signUp.html">Create account</a></p>
+      <p>Don't have an account? <a href="/views/signUp.html">Create account</a></p>
     </div>
   </div>
 
@@ -74,7 +74,7 @@
             var uid = user.uid;
 
             console.log("change windows");
-            window.location.assign("climb_type.html");
+            window.location.assign("/views/climb_type.html");
 
             // ...
           } else {
