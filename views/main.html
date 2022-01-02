@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main</title>
+  <link rel="stylesheet" href="/styles/main.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="/firebaseAPI.js"></script>
+  <script src="/scripts/backButton.js"></script>
+
+</head>
+<body onload="buttonStuff()">
+  <button id="backButton" onclick="backOnePage()">back</button>
+
+  <div id="container">
+    <div id="climb-types">
+      <h2>Select your type of climbing</h2> 
+      <input id="trad" type="radio" name="climbType" onclick="showTrad()" value="trad" class="trad-button">
+      <label class="trad-button" for="trad">Trad</label> 
+      <input id="bouldering" type="radio" name="climbType" onclick="showBouldering()" value="bouldering" class="bouldering-button">
+      <label class="bouldering-button" for="bouldering">Bouldering</label> 
+      <input id="sport" type="radio" name="climbType" onclick="showSport()" value="sport" class="sport-button">
+      <label class="sport-button" for="sport">Sport Climbing</label>     
+    </div>
+    <div id="climb-areas-container"></div>
+    <button id="home" onclick="goToHome()">Home</button>
+  </div>
+
+  <script src="/scripts/main.js"></script>
+  
+</body>
+</html>

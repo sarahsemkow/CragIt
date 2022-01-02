@@ -5,6 +5,7 @@ html {
 
 h2 {
   text-align: center;
+  margin-bottom: 35px;
 }
 
 #container {
@@ -13,11 +14,13 @@ h2 {
 }
 
 #climb-types input + label {
-  /* width: 150px; */
+  width: 100px;
+  white-space: nowrap;
   /* height: 52px; */
   border: 2px solid rebeccapurple;    
   border-radius: 8px;
   padding: 15px 5px;
+  text-align: center;
 }
 
 #climb-types label input {
@@ -40,9 +43,9 @@ label:hover, input:hover {
 }
 
 #climb-types {
-  display: grid;
+  /* display: grid; */
   /* grid-template-rows: (5, 1fr); */
-  row-gap: 20px;
+  /* row-gap: 20px; */
   /* justify-items: center; */
   text-align: center;
 }
