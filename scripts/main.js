@@ -19,6 +19,18 @@ function buttonStuff() {
   sportButton[1].style.display = "none";
 }
 
+function signOut() {
+
+  // To sign out a user
+  firebase.auth().signOut().then(() => {
+    window.location.assign("/views/login.html");
+    // Sign-out successful.
+    }).catch((error) => {
+    // An error happened.
+  });
+
+}
+
 // Trad, bouldering and climbing buttons
 var tradButtonId = document.getElementById("trad");
 var sportButtonId = document.getElementById("sport");
@@ -32,9 +44,9 @@ const sportButton = document.getElementsByClassName("sport-button");
 function showUserClimbTypes() {
 
   firebase.auth().onAuthStateChanged((user) => {
-    var uid = user.uid;
 
     if (user) {  
+      var uid = user.uid;
       let userClimbingType = db.collection("users").doc(uid);
       // Depending on user info in db, which show the selected button
       userClimbingType.get().then((doc) => {
@@ -504,7 +516,7 @@ function showAreaClicked(regionName, areaName) {
             let iArea = document.createElement("li");
             iArea.setAttribute("id", `${cragNameNoSpaces}`);
             iArea.setAttribute("class", `${type} ${areaNoSpaces} ${cragNameNoSpaces}`);
-            // iArea.setAttribute("onclick", `show${capitalizedArea}Area()`);
+            iArea.setAttribute("onclick", `showDetails()`);
             iArea.innerText = cragName;
 
             climbAreasContainer.appendChild(iArea);
@@ -536,7 +548,7 @@ function showHome() {
       document.getElementById("home").style.display = "none";
     
   } else {
-    document.getElementById("home").style.display = "block";
+    document.getElementById("home").style.display = "inline-block";
 
   }
 }

@@ -1,18 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
 
+:root {
+  --darkBlue: #344E41;
+  --darkGreen: #3A5A40;
+  --green: #588157;
+  --lightGreen: #A3B18A;
+  --slate: #DAD7CD;
+}
+
+#backButton {
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
 html {
   font-size: x-large;
   font-family: 'PT Serif', serif;
 }
 
+body {
+  background-image: url("/images/rock_jut.jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+}
+
 h2 {
-  margin-bottom: 20px;
+  margin-top: 0;
+  /* margin-bottom: 20px; */
+  font-weight:bolder;
+  background-color: white;
+  padding: 7px;
+  border-radius: 8px;
+  opacity: 0.7;
 }
 
 #climb-types label {
   width: 180px;
   height: 72px;
-  border: 2px solid rebeccapurple;    
+  border: 2px solid var(--darkBlue);    
+  background-color: var(--slate);
   border-radius: 8px;
   margin: auto;
   margin-top:0px;
@@ -34,14 +61,24 @@ label:hover, input:hover {
 }
 
 #climb-types input:checked + span {
-  background-color: rebeccapurple;
-  color:rgb(201, 242, 242);
+  background-color: var(--darkBlue);
+  color: white;
 }
+
+#climb-types input:hover + span {
+  transform: scale(1.06, 1.06);
+  border-radius: 8px;
+}
+
+/* #climb-types span:hover {
+  transform: scale(1.02, 1.02);
+} */
 
 #submit-here {
   padding: 20px 65px;
   border: none;
-  background-color: rgb(201, 242, 242);
+  background-color: var(--green);
+  color: white;
   border-radius: 8px;
   /* color: black; */
   font-size: x-large;
@@ -49,8 +86,8 @@ label:hover, input:hover {
 }
 
 #submit-here:hover {
-  transform: scale(1.05, 1.05);
-  cursor: pointer;
+  transform: scale(1.06, 1.06);
+  /* cursor: pointer; */
 }
 
 #climb-types {
@@ -58,7 +95,8 @@ label:hover, input:hover {
   margin-top: 15%;
   margin-bottom: 20px;
   /* margin: 100px; */
-  background-color: cornflowerblue;
+  /* background-color: var(--slate); */
+  /* background-color: white; */
   border-radius: 8px;
   display: grid;
   grid-template-rows: (5, 1fr);
@@ -69,6 +107,7 @@ label:hover, input:hover {
   /* width: 50vw; */
   padding-bottom: 30px;
   /* height: 100vh; */
+  /* opacity: 0.75; */
 }
 
 @media screen and (max-width: 1000px) {

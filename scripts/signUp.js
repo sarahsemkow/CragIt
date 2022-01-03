@@ -84,17 +84,6 @@ firebase.auth().onAuthStateChanged((user) => {
   });
 
 
-function signOut() {
-
-  // To sign out a user
-  firebase.auth().signOut().then(() => {
-    // Sign-out successful.
-    }).catch((error) => {
-    // An error happened.
-  });
-
-}
-
 // set an observer on the Auth object
 // can then get the user's basic profile info form the User object
 

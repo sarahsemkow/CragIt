@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/login.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Sign Up</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -23,7 +24,10 @@
       <label for="email">Email</label>
       <input type="text" id="email" name="email" placeholder="Enter email">
       <label for="password">Password</label>
-      <input type="text" id="password" name="password" placeholder="Enter password">
+      <p>
+        <input type="text" id="password" name="password" placeholder="Enter password">
+        <i id="togglePassword" class="material-icons">visibility_off</i>
+      </p>
       <button id="signUp" onclick="createAccount()">Create Account</button>
       <p>Aready have an account? <a href="/views/login.html">Log In</a></p>
     </div>
