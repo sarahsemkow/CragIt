@@ -3,7 +3,15 @@
 //   location.href = "loading.html";
 // }
 
-console.log("hello");
+const togglePassword = document.getElementById("togglePassword");
+const password = document.getElementById("password");
+
+togglePassword.addEventListener("click", e => {
+  const type = password.getAttribute("type") === "password" ? "text" : "password";
+  password.setAttribute("type", type);
+  const toggle = togglePassword.innerText === "visibility" ? "visibility_off" : "visibility";
+  togglePassword.innerText = toggle;
+});
 
 
 function createAccount() {

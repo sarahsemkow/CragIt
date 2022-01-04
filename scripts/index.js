@@ -560,7 +560,7 @@ function showDetails(region, area, name) {
   localStorage.setItem("crag", name);
   localStorage.setItem("region", region);
   localStorage.setItem("area", area);
-  window.location.assign("/public/details.html");  
+  window.location.assign("/views/details.html");  
 }
 
 showHome();
