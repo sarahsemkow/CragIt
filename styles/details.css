@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+:root {
+  --darkBlue: #344E41;
+  --darkGreen: #3A5A40;
+  --green: #588157;
+  --lightGreen: #A3B18A;
+  --slate: #DAD7CD;
+}
+
+html {
+  /* font-family: sans-serif; */
+  /* font-weight: 450; */
+  font-size: large;
+  font-family: 'PT Serif', serif;
+}
+
+body {
+  background-image: url("/images/rock_jut.jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+}
+
+li {
+  list-style-type: none;
+  text-align: center;
+  padding: 40px;
+  border-radius: 8px;
+  margin: 0 40px;
+  margin-bottom: 20px;
+}
+
+li:hover {
+  transform: scale(1.05, 1.05);
+}
+
+#backButton {
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+#backButton:hover {
+  transform: scale(1.05, 1.05);
+}
+
+#signOut {
+  padding: 10px;
+  border-radius: 8px;
+  background-color: var(--slate);
+  font-size: medium;
+  border: none;
+  /* margin: 0 100px; */
+  position: absolute;
+  margin-top: 5px;
+  /* bottom: 1%; */
+  right: 2%;
+  text-align: center;
+}
+
+#signOut:hover {
+  transform: scale(1.05, 1.05);
+}
+
+#climb-area-container {
+  margin-top: 30px;  
+  margin-bottom: 60px;
+}
+
+#lighthousepark, #whytecliffpark, #electricave, #thecourtyard, 
+#theplayground, #sugarloaf, #woodstock, #easychair, #titanicsouth, 
+#godmancreek {
+  background-color: var(--lightGreen);
+}
+
+#squamish, #vancouver, #whistler {
+  background-color: var(--darkGreen);
+  color: white;
+  font-weight: 500;
+}
+
+.bouldering, .trad, .sport {
+  background-color: var(--green);
+  color: white;
+}
+
+#submit-or-view {
+  /* display: grid; */
+  text-align: center;
+}
+
+#submit, #view {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--slate);
+  font-size: medium;
+  font-weight: 500;
+  border: none;
+  text-align: center;
+}
+
+#submit:hover, #view:hover {
+  transform: scale(1.05, 1.05);
+}
+
+#submit-or-view input + label {
+  width: 100px;
+  white-space: nowrap;
+  /* height: 52px; */
+  border: 2px solid var(--darkBlue);   
+  background-color: var(--slate); 
+  border-radius: 8px;
+  padding: 15px 5px;
+  text-align: center;
+}
+
+#submit-or-view input {
+  position: absolute;
+  top: -20px;
+}
+
+label:hover, input:hover {
+  cursor: pointer;
+}
+
+#submit-or-view input:checked + label {
+  background-color: var(--darkBlue);
+  color:white;
+}
+
+#submit-or-view input:hover + label {
+  transform: scale(1.05, 1.05);
+}
+
+#submit-or-view {
+  text-align: center;
+  font-weight: 500;
+}
+
+#submit-here {
+  margin-top: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: var(--green);
+  color: white;
+  border-radius: 8px;
+  /* color: black; */
+  font-size: x-large;
+}
+
+#submit-here:hover {
+  transform: scale(1.05, 1.05);
+}
+
+#submitted-on {
+  background-color: white;
+  opacity: 0.8;
+  margin: 10px 60px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 10px 0;
+}
+
+#business-levels {
+  display: grid;
+  grid-template-columns: 25% 30% 34%;
+  background-color: white;
+  column-gap: 5px;
+  opacity: 0.8;
+  border-radius: 8px;
+  padding-top: 8px;
+  justify-content: center;
+  padding-bottom: 5px;
+}
+
+.busy-images-stacked-1 {
+  display: grid;
+  justify-items: center;
+}
+
+.busy-images-stacked-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 38px);
+  justify-content: center;
+  /* margin-left: 70px; */
+  /* margin-right: 10px; */
+}
+
+.busy-images-stacked-2 p {
+  justify-self: center;
+  grid-column: 1 / -1;
+}
+
+.busy-images-stacked-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 38px);
+  justify-content: center;
+  /* position: absolute; */
+  /* margin-right: 40px; */
+}
+
+.busy-images-stacked-3 p {
+  justify-self: center;
+  grid-column: 1 / -1;
+}
+
+.business {
+  text-align: center;
+  font-weight: 500;
+}
+
+.business input {
+  position:absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+#submit-div img + p {
+  cursor: pointer;
+}
+
+.business label .images-stacked {
+  padding-top: 10px;
+}
+
+.business label input {
+  position: absolute;
+  top: -20px;
+}
+
+label:hover, input:hover {
+  cursor: pointer;
+}
+
+.business input:checked + .images-stacked {
+  background-color: var(--green);
+  color: white;
+  border-radius: 8px;
+}
+
+.business input:hover + .images-stacked {
+  transform: scale(1.05, 1.05);
+  border-radius: 8px;
+}
+
+.images-stacked {
+  margin-bottom: 5px;
+}
+
+a {
+  bottom: 1%;
+  position:absolute;
+  white-space: nowrap;
+  right: 35%;
+  font-size: small;
+  text-decoration: none;
+}
+
+#buttons {
+  margin-bottom: 40px;
+}
+
+.business input:hover + #images-stacked-1, 
+.business input:hover + #images-stacked-2, 
+.business input:hover #images-stacked-3 {
+  transform: none;
+}
+
+.business input:checked + #images-stacked-1, 
+.business input:checked + #images-stacked-2, 
+.business input:checked #images-stacked-3 {
+  transform: none;
+}
+
+.business input:checked + input:hover + #images-stacked-1, 
+.business input:checked + input:hover + #images-stacked-2, 
+.business input:checked + input:hover + #images-stacked-3 {
+  transform: none;
+}
