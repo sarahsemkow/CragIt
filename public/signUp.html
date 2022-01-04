@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/login.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <title>Login</title>
+  <title>Sign Up</title>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   <script src="/firebaseAPI.js"></script>
+  <script src="/scripts/signUp.js"></script>
 
 </head>
 <body>
@@ -24,15 +25,13 @@
       <input type="text" id="email" name="email" placeholder="Enter email">
       <label for="password">Password</label>
       <p>
-        <input type="password" id="password" name="password" placeholder="Enter password">
+        <input type="text" id="password" name="password" placeholder="Enter password">
         <i id="togglePassword" class="material-icons">visibility_off</i>
-      </p>  
-      <button id="login" onclick="logIn()">Login</button>
-      <p>Don't have an account? <a href="/views/signUp.html">Create account</a></p>
+      </p>
+      <button id="signUp" onclick="createAccount()">Create Account</button>
+      <p>Aready have an account? <a href="login.html">Log In</a></p>
     </div>
   </div>
-
-  <script src="/scripts/login.js"></script>
   
 </body>
 </html>

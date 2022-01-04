@@ -53,7 +53,7 @@ function logIn() {
         var uid = user.uid;
 
         console.log("change windows");
-        window.location.assign("/views/climb_type.html");
+        window.location.assign("climb_type.html");
 
         // ...
       } else {
