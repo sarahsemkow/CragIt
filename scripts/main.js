@@ -486,6 +486,7 @@ function showAreaClicked(regionName, areaName) {
       let cragName;
       let type;
       let region;
+      let capitalizedRegion;
     
       console.log(`${areaName} was clicked`);
     
@@ -513,10 +514,12 @@ function showAreaClicked(regionName, areaName) {
             areaNoSpaces = area.toLowerCase().replaceAll(' ', '');;
             capitalizedArea = capitalize(areaNoSpaces);
 
+            capitalizedRegion = capitalize(region);
+
             let iArea = document.createElement("li");
             iArea.setAttribute("id", `${cragNameNoSpaces}`);
             iArea.setAttribute("class", `${type} ${areaNoSpaces} ${cragNameNoSpaces}`);
-            iArea.setAttribute("onclick", `showDetails()`);
+            iArea.setAttribute("onclick", `showDetails('${capitalizedRegion}', '${area}', '${cragName}')`);
             iArea.innerText = cragName;
 
             climbAreasContainer.appendChild(iArea);
@@ -551,6 +554,13 @@ function showHome() {
     document.getElementById("home").style.display = "inline-block";
 
   }
+}
+
+function showDetails(region, area, name) {
+  localStorage.setItem("crag", name);
+  localStorage.setItem("region", region);
+  localStorage.setItem("area", area);
+  window.location.assign("/views/details.html");  
 }
 
 showHome();

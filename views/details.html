@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Details</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/details.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="/firebaseAPI.js"></script>
+  <script src="/scripts/backButton.js"></script>
+</head>
+<body>
+  <span id="backButton" class="material-icons" onclick="backOnePage()">arrow_back_ios</span>
+  <button id="signOut" onclick="signOut()">Sign out</button>
+
+  <div id="container">
+    <div id="climb-area-container">
+      <li id="regionName">Region Name</li>
+      <li id="areaName">Area Name</li>
+      <li id="cragName">Crag Name</li>
+    </div>
+    <div id="submit-or-view">
+      <div id="buttons">
+        <input id="view" type="radio" onclick="showViews()" name="waitTimes" class="view-button" value="View Wait Times"/>
+        <label class="view-button" for="view">View Wait Time</label> 
+        <input id="submit" type="radio" onclick="showSubmit()" name="waitTimes" class="submit-button" value="Submit Wait Times"/>
+        <label class="submit-button" for="submit">Submit Wait Time</label>  
+      </div>
+      <div id="view-div">
+        <div>
+          <p id="submitted-on">Submitted On: </p>
+          <div id="busy-level">
+          </div>       
+        </div>
+      </div>
+        <div id="submit-div">
+        </div>
+        <button id="submit-here" type="submit" value="next" onclick="postWaitTime()" style= "display: inline;">Submit</button>
+      <a href="https://icons8.com/icon/9780/climbing" style="color:var(--slate);">Climbing icon by Icons8</a>
+    </div>
+  </div>
+
+  <script src="/scripts/details.js"></script>
+  
+</body>
+</html>
