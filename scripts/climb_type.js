@@ -92,7 +92,7 @@ function postSport() {
 }
 
 function postClimbing() {
-  window.location.assign("/views/main.html");
+  window.location.assign("/index.html");
 }
 
 

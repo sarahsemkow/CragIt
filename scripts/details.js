@@ -122,8 +122,6 @@ function showViews() {
   document.getElementById("submit-div").style.display = "none";
   document.getElementById("submit-here").style.display = "none";
 
-  document.getElementById("busy-level").innerHTML = busyLevelView;
-
   db.collection("climbingAreas").doc(`${region}`).collection(`${area}`).doc(`${cragName}`)
     .get()
     .then(doc => {
@@ -131,8 +129,6 @@ function showViews() {
       let timePosted = doc.data().timePosted;
       let datePosted = doc.data().datePosted;
       let busy = doc.data().busy;
-
-      document.getElementById("submitted-on").innerText = "Submitted: " + datePosted + " @ " + timePosted;
 
       let busyLevel = busy.replaceAll(' ', '');;
 
@@ -142,16 +138,20 @@ function showViews() {
 
 
       if (busy != undefined) {
+        document.getElementById("busy-level").innerHTML = busyLevelView;
         document.getElementById(busyLevel).checked = true;
-      }
+        let busyButtons = document.getElementsByClassName("busy-button");
 
-      let busyButtons = document.getElementsByClassName("busy-button");
-
-      for (let i = 0; i < busyButtons.length; i++) {
-        if (busyButtons[i].checked != true) {
-          busyButtons[i].checked = false;
+        for (let i = 0; i < busyButtons.length; i++) {
+          if (busyButtons[i].checked != true) {
+            busyButtons[i].checked = false;
+          }
         }
+        document.getElementById("submitted-on").innerText = "Submitted: " + datePosted + " @ " + timePosted;
+
       }
+
+      
 
       
 
