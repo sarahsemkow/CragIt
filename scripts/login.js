@@ -53,7 +53,7 @@ function logIn() {
         var uid = user.uid;
 
         console.log("change windows");
-        window.location.assign("climb_type.html");
+        window.location.assign("/views/main.html");
 
         // ...
       } else {
@@ -63,8 +63,17 @@ function logIn() {
     })
   })
   .catch((error) => {
-    var errorCode = error.code;
     var errorMessage = error.message;
+    let passBox = document.getElementById("password-box");
+    let errorMes = document.createElement("p");
+    errorMes.innerText = errorMessage;
+    errorMes.setAttribute("id", "errorMessage");
+    passBox.appendChild(errorMes);
+
+    var errorCode = error.code;
+    console.log(errorCode);
+    console.log(errorMessage);
+
   });
 }
 

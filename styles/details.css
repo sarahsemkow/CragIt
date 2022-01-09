@@ -15,6 +15,10 @@ html {
   font-family: 'PT Serif', serif;
 }
 
+html, body {
+  overflow: hidden;
+}
+
 body {
   background-image: url("/images/rock_jut.jpg");
   background-repeat: no-repeat;
@@ -25,7 +29,7 @@ body {
 li {
   list-style-type: none;
   text-align: center;
-  padding: 40px;
+  padding: 25px;
   border-radius: 8px;
   margin: 0 40px;
   margin-bottom: 20px;
@@ -69,7 +73,7 @@ li:hover {
 
 #lighthousepark, #whytecliffpark, #electricave, #thecourtyard, 
 #theplayground, #sugarloaf, #woodstock, #easychair, #titanicsouth, 
-#godmancreek {
+#godmancreek, #thelynnboulders, #sullyshangout {
   background-color: var(--lightGreen);
 }
 
@@ -277,4 +281,12 @@ a {
 .business input:checked + input:hover + #images-stacked-2, 
 .business input:checked + input:hover + #images-stacked-3 {
   transform: none;
+}
+
+#wait-time-submitted {
+  background-color: var(--lightGreen);
+  color:white;
+  padding: 5px;
+  border-radius: 8px;
+  margin: 10px 100px
 }

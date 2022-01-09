@@ -18,6 +18,10 @@ html {
   font-family: 'PT Serif', serif;
 }
 
+html, body {
+  overflow: hidden;
+}
+
 body {
   background-image: url("/images/rock_jut.jpg");
   background-repeat: no-repeat;
@@ -25,14 +29,21 @@ body {
   background-size: cover;
 }
 
-h2 {
-  margin-top: 0;
-  /* margin-bottom: 20px; */
-  font-weight:bolder;
+#header {
   background-color: white;
-  padding: 7px;
+  padding: 0 10px;
   border-radius: 8px;
   opacity: 0.7;
+}
+
+h3 {
+  font-weight:bolder;
+}
+
+p {
+  color: black;
+  font-size: medium;
+  margin-top: -17px;
 }
 
 #climb-types label {
@@ -92,7 +103,7 @@ label:hover, input:hover {
 
 #climb-types {
   margin: 0 30%;
-  margin-top: 15%;
+  margin-top: 10%;
   margin-bottom: 20px;
   /* margin: 100px; */
   /* background-color: var(--slate); */
@@ -100,7 +111,7 @@ label:hover, input:hover {
   border-radius: 8px;
   display: grid;
   grid-template-rows: (5, 1fr);
-  row-gap: 30px;
+  row-gap: 15px;
   justify-items: center;
   text-align: center;
   /* height: 70vh; */
@@ -114,7 +125,7 @@ label:hover, input:hover {
 
   #climb-types {
     margin: 0 10%;
-    margin-top: 30%;
+    margin-top: 5%;
     margin-bottom: 20px;
   }
 

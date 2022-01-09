@@ -6,6 +6,10 @@
   --slate: #DAD7CD;
 }
 
+html, body {
+  overflow: hidden;
+}
+
 body {
   background-image: url("/images/rock_jut.jpg");
   background-repeat: no-repeat;
@@ -78,6 +82,12 @@ i {
   margin-left: -30px;
   /* margin-top: 10px; */
   cursor: pointer;
+}
+
+#errorMessage {
+  color: red;
+  margin-top: -5px;
+  margin-bottom: -5px;
 }
 
 @media screen and (max-width: 1000px) {

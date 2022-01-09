@@ -27,22 +27,22 @@
     </div>
     <div id="submit-or-view">
       <div id="buttons">
-        <input id="view" type="radio" onclick="showViews()" name="waitTimes" class="view-button" value="View Wait Times"/>
+        <input id="view" type="radio" onclick="showViews(); clear()" name="waitTimes" class="view-button" value="View Wait Times" checked/>
         <label class="view-button" for="view">View Wait Time</label> 
-        <input id="submit" type="radio" onclick="showSubmit()" name="waitTimes" class="submit-button" value="Submit Wait Times"/>
+        <input id="submit" type="radio" onclick="showSubmit(); clear()" name="waitTimes" class="submit-button" value="Submit Wait Times"/>
         <label class="submit-button" for="submit">Submit Wait Time</label>  
       </div>
+      <!-- <div id="info"></div> -->
       <div id="view-div">
         <div>
           <p id="submitted-on">No wait times yet!</p>
-          <div id="busy-level">
-          </div>       
+          <div id="busy-level"></div>       
         </div>
       </div>
-        <div id="submit-div">
-        </div>
+        <div id="submit-div"></div>
         <button id="submit-here" type="submit" value="next" onclick="postWaitTime()" style= "display: inline;">Submit</button>
-      <a href="https://icons8.com/icon/9780/climbing" style="color:var(--slate);">Climbing icon by Icons8</a>
+        <p id="wait-time-submitted"></p>
+      <!-- <a href="https://icons8.com/icon/9780/climbing" style="color:var(--slate);">Climbing icon by Icons8</a> -->
     </div>
   </div>
 
@@ -50,3 +50,37 @@
   
 </body>
 </html>
+
+<!-- var busyLevel = 
+`<div id="business-levels">
+  <div class="business">
+    <label for="notbusy" class="not-busy-button">
+      <input type="radio" id="not-busy" name="waitTime" class="busy-button">
+      <div id="images-stacked-1" class="busy-images-stacked-1 images-stacked">
+        <img src="https://img.icons8.com/ios-filled/50/000000/climbing.png"/>
+        <p>Not Busy</p>
+      </div>
+    </label>
+  </div>
+  <div class="business">
+    <label for="busy" class="busy-button">
+      <input type="radio" id="busy" name="waitTime" class="busy-button">
+      <div id="images-stacked-2" class="busy-images-stacked-2 images-stacked">
+        <img src="https://img.icons8.com/ios-filled/50/000000/climbing.png"/>
+        <img src="https://img.icons8.com/ios-filled/50/000000/climbing.png"/>
+        <p>Busy</p>
+      </div>
+    </label>
+  </div>
+  <div class="business">
+    <label for="verybusy" class="very-busy-button">
+      <input type="radio" id="very-busy" name="waitTime" class="busy-button">
+      <div id="images-stacked-3" class="busy-images-stacked-3 images-stacked">
+        <img src="https://img.icons8.com/ios-filled/50/000000/climbing.png"/>
+        <img src="https://img.icons8.com/ios-filled/50/000000/climbing.png"/>
+        <img src="https://img.icons8.com/ios-filled/50/000000/climbing.png"/>
+        <p>Very Busy</p>
+      </div>
+    </label>   
+  </div>
+</div>`; -->
